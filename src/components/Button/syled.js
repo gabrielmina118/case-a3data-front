@@ -27,3 +27,21 @@ export const ButtonCustomStyled = styled.button`
         text-align: center;
     }
 `;
+
+export const MainButtonGroup = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+    button {
+        cursor: pointer;
+        img {
+            width: 60px;
+            height: 50px;
+        }
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+    }
+`;
