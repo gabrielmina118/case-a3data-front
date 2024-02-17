@@ -1,6 +1,15 @@
 import React, { useState } from "react";
-import { AsideContainer, Bar, HamburgerButton, Li, Logo, Nav, StyledLink, Ul } from "./styled";
-
+import {
+    AsideContainer,
+    Bar,
+    HamburgerButton,
+    Li,
+    Logo,
+    Nav,
+    StyledLink,
+    MainAside,
+    Ul,
+} from "./styled";
 
 const AsideMenu = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -10,14 +19,16 @@ const AsideMenu = () => {
     };
 
     return (
-        <>
-            <HamburgerButton onClick={toggleMenu}>
+        <MainAside>
+            {/* <HamburgerButton onClick={toggleMenu}>
                 <Bar menuOpen={menuOpen} />
                 <Bar menuOpen={menuOpen} />
                 <Bar menuOpen={menuOpen} />
-            </HamburgerButton>
+            </HamburgerButton> */}
             <AsideContainer menuOpen={menuOpen}>
-                <Logo>Cadastro de <br/> Pedido Cirúrgico</Logo>
+                <Logo>
+                    Cadastro de <br /> Pedido Cirúrgico
+                </Logo>
                 <Nav>
                     <Ul>
                         <Li>
@@ -35,7 +46,7 @@ const AsideMenu = () => {
                     </Ul>
                 </Nav>
             </AsideContainer>
-        </>
+        </MainAside>
     );
 };
 

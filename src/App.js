@@ -1,6 +1,7 @@
 import { Main } from "./styled";
 import AsideMenu from "./components/Aside/Aside";
 import { GlobalStyle } from "./constants/GlobalStyled";
+import Room from "./components/Room/Room";
 
 function App() {
     return (
@@ -8,7 +9,7 @@ function App() {
             <GlobalStyle />
             <Main>
                 <AsideMenu />
-                lkjfdsahlkfhl
+                <Room/>
             </Main>
         </>
     );

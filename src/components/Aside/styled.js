@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
+export const MainAside = styled.div`
+    width: 20%;
+`;
+
 export const AsideContainer = styled.aside`
-    position: fixed;
     top: 0;
     height: 100%;
     background-color: #001863;
