@@ -22,8 +22,8 @@ export const ModalContainer = styled.div`
 
 export const ModalContent = styled.div`
     background: #fff;
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -34,7 +34,7 @@ export const ModalContent = styled.div`
 export const Title = styled.div`
     background: #ededec;
     display: flex;
-    min-height: 50%;
+    height: 50%;
     justify-content: space-around;
     align-items: center;
     width: 100%;

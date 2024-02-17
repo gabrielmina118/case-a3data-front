@@ -23,16 +23,6 @@ const Room = () => {
         }
     };
 
-    useEffect(() => {
-        getAllRooms();
-    }, []);
-
-    const data = rooms.map((room) => [
-        room.id,
-        room.numberRoom,
-        <ButtonTableGroup />,
-    ]);
-
     const addRoom = async () => {
         const room = {
             numberRoom: Number(roomName),
@@ -42,9 +32,9 @@ const Room = () => {
             console.log("ROOM");
             try {
                 await axios.post(`${URL_API}/room`, room);
-
                 setShowModal(true);
                 await getAllRooms();
+                setRoomName("");
             } catch (error) {
                 console.error(
                     "Erro ao obter as salas:",
@@ -53,6 +43,30 @@ const Room = () => {
             }
         }
     };
+
+    const deleteRoom = async (id) => {
+        try {
+            const response = await axios.delete(`${URL_API}/room/${id}`);
+            console.log(response);
+            setShowModal(true);
+            await getAllRooms();
+        } catch (error) {
+            console.error(
+                "Erro ao obter as salas:",
+                error.response.data.message
+            );
+        }
+    };
+
+    useEffect(() => {
+        getAllRooms();
+    }, []);
+
+    const data = rooms.map((room) => [
+        room.id,
+        room.numberRoom,
+        <ButtonTableGroup onDelete={() => deleteRoom(room.id)} />,
+    ]);
 
     return (
         <>

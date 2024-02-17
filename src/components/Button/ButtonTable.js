@@ -6,10 +6,10 @@ import updateIcon from "../../assets/icon-editar.svg";
 const ButtonTableGroup = ({ onEdit, onDelete }) => (
     <MainButtonGroup>
         <button onClick={onEdit}>
-            <img src={deleteIcon} />
+            <img src={updateIcon} />
         </button>
         <button onClick={onDelete}>
-            <img src={updateIcon} />
+            <img src={deleteIcon} />
         </button>
     </MainButtonGroup>
 );
