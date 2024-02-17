@@ -1,10 +1,16 @@
+import { Main } from "./styled";
+import AsideMenu from "./components/Aside/Aside";
 import { GlobalStyle } from "./constants/GlobalStyled";
 
 function App() {
     return (
-        <GlobalStyle>
-            <div></div>
-        </GlobalStyle>
+        <>
+            <GlobalStyle />
+            <Main>
+                <AsideMenu />
+                lkjfdsahlkfhl
+            </Main>
+        </>
     );
 }
 
