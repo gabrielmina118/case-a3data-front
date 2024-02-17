@@ -9,7 +9,7 @@ function App() {
             <GlobalStyle />
             <Main>
                 <AsideMenu />
-                <Room/>
+                <Room />
             </Main>
         </>
     );

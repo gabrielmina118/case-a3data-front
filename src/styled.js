@@ -4,5 +4,5 @@ export const Main = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 `;
