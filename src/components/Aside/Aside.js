@@ -11,7 +11,7 @@ import {
     Ul,
 } from "./styled";
 
-const AsideMenu = () => {
+const AsideMenu = ({ setPage }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -32,16 +32,24 @@ const AsideMenu = () => {
                 <Nav>
                     <Ul>
                         <Li>
-                            <StyledLink href="#">Sala</StyledLink>
+                            <StyledLink onClick={() => setPage(1)}>
+                                Sala
+                            </StyledLink>
                         </Li>
                         <Li>
-                            <StyledLink href="#">Procedimento</StyledLink>
+                            <StyledLink onClick={() => setPage(2)}>
+                                Procedimento
+                            </StyledLink>
                         </Li>
                         <Li>
-                            <StyledLink href="#">Hospital</StyledLink>
+                            <StyledLink onClick={() => setPage(3)}>
+                                Hospital
+                            </StyledLink>
                         </Li>
                         <Li>
-                            <StyledLink href="#">Pedido Cirúrgico</StyledLink>
+                            <StyledLink onClick={() => setPage(4)}>
+                                Pedido Cirúrgico
+                            </StyledLink>
                         </Li>
                     </Ul>
                 </Nav>

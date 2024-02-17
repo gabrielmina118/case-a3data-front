@@ -45,6 +45,7 @@ export const StyledLink = styled.a`
     padding: 10px;
     display: block;
     transition: background-color 0.3s;
+    cursor: pointer;
     &:hover {
         color: #fff;
         background-color: #ccc;
