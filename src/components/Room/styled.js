@@ -12,3 +12,7 @@ export const RegisterInfo = styled.div`
     justify-content: space-between;
     padding: 2%;
 `;
+export const InfoScreen = styled.div`
+    width: 100%;
+    padding: 1%;
+`;
