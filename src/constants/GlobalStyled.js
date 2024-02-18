@@ -9,8 +9,15 @@ export const GlobalStyle = createGlobalStyle`
     }
 
   :root{
-    --logo:#00033D
-    --letter-logo:#FFC600
+    --logo:#00033D;
+    --letter-logo:#FFC600;
+    --menu-size-min: 260px;
+    --menu-size-max: 300px;
+    --primary-color: #001863;
+    --danger-color: #FF6666;
+    --information-color: #06bec6;
+    --secondary-color: #06bec6;
+    --success-color: #00cc66;
   }
 
   body {
