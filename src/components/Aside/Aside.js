@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
     AsideContainer,
-    Bar,
     HamburgerButton,
     Li,
     Logo,
@@ -9,26 +8,27 @@ import {
     StyledLink,
     MainAside,
     Ul,
+    Blackout,
 } from "./styled";
+import munuIcon from "../../assets/icon-menu.svg";
 
 const AsideMenu = ({ setPage }) => {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [open, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+        setMenuOpen(!open);
     };
 
     return (
-        <MainAside>
-            {/* <HamburgerButton onClick={toggleMenu}>
-                <Bar menuOpen={menuOpen} />
-                <Bar menuOpen={menuOpen} />
-                <Bar menuOpen={menuOpen} />
-            </HamburgerButton> */}
-            <AsideContainer menuOpen={menuOpen}>
-                <Logo>
-                    Cadastro de <br /> Pedido Cirúrgico
-                </Logo>
+        <MainAside open={open}>
+            {!open && (
+                <HamburgerButton onClick={toggleMenu}>
+                    <img src={munuIcon} alt="Icone de menu" />
+                </HamburgerButton>
+            )}
+            <Blackout onClick={toggleMenu} open={open} />
+            <AsideContainer open={open}>
+                <Logo>Cadastro de Pedido Cirúrgico</Logo>
                 <Nav>
                     <Ul>
                         <Li>
