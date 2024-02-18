@@ -1,47 +1,59 @@
 import styled from "styled-components";
-
-export const ButtonCustomStyled = styled.button`
-    width: 160px;
-    color: #fff;
-    font-size: 1.2em;
-    text-align: center;
-    padding: 15px 35px;
-    border-radius: 60px;
-    display: inline-block;
-    background-color: #06bec6;
+const colors = {
+    primary: "var(--primary-color)",
+    secondary: "var(--secondary-color)",
+    white: "#fff",
+    black: "#000",
+    danger: "var(--danger-color)",
+    gray: "#ccc",
+};
+const sizes = {
+    small: {
+        padding: "0.35rem 1rem",
+        borderRadius: "16px",
+        fontSize: "14px",
+        imgSize: "16px",
+    },
+    medium: {
+        padding: "0.5rem 1.5rem",
+        borderRadius: "20px",
+        fontSize: "20px",
+        imgSize: "24px",
+    },
+    large: {
+        padding: "1rem 2rem",
+        borderRadius: "32px",
+        fontSize: "24px",
+        imgSize: "32px",
+    },
+};
+export const ButtonStyled = styled.button`
     cursor: pointer;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06),
-        0 2px 10px 0 rgba(0, 0, 0, 0.07);
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: ${(props) => sizes[props.size]?.padding || sizes.medium.padding};
+    border-radius: ${(props) =>
+        sizes[props.size]?.borderRadius || sizes.medium.borderRadius};
+    background-color: ${(props) => colors[props.color] || colors.primary};
+    color: ${(props) => colors[props.textColor] || colors.black};
+    font-size: ${(props) =>
+        sizes[props.size]?.fontSize || sizes.medium.fontSize};
+    outline: none;
     border: none;
-
+    img {
+        width: ${(props) => sizes[props.size]?.imgSize || sizes.medium.imgSize};
+    }
     &:hover {
-        transform: translateY(1px);
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1),
-            0 1px 1px 0 rgba(0, 0, 0, 0.09);
+        filter: brightness(0.8);
     }
     @media (max-width: 768px) {
-        width: 100%;
-        float: none;
-        text-align: center;
-    }
-`;
-
-export const MainButtonGroup = styled.div`
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-
-    button {
-        cursor: pointer;
+        padding: ${sizes.small.padding};
+        font-size: ${(props) =>
+            props.size === "small" ? "0" : sizes.small.fontSize};
+        gap: ${(props) => (props.size === "small" ? "0" : "0.5rem")};
         img {
-            width: 60px;
-            height: 50px;
-        }
-
-        &:hover {
-            filter: brightness(0.8);
+            width: ${sizes.small.imgSize};
         }
     }
 `;

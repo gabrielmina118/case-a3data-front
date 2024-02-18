@@ -1,16 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ButtonCustomStyled } from "./syled";
+import { ButtonStyled } from "./styled";
 
-const ButtonCustom = ({ children, onClick }) => {
+const Button = ({ children, onClick, icon, size, color, textColor, type }) => {
     return (
-        <ButtonCustomStyled onClick={onClick}>{children}</ButtonCustomStyled>
+        <ButtonStyled
+            onClick={onClick}
+            size={size}
+            textColor={textColor}
+            color={color}
+            type={type}
+        >
+            {icon && <img src={icon} alt={`Icone ${children}`} type={type} />}
+            {children}
+        </ButtonStyled>
     );
 };
 
-ButtonCustom.propTypes = {
+Button.propTypes = {
     children: PropTypes.node.isRequired,
-    onClick: PropTypes.func.isRequired,
 };
 
-export default ButtonCustom;
+export default Button;
