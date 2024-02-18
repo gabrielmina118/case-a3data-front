@@ -1,31 +1,31 @@
 import React from "react";
-import { StyledTable, StyledTh, StyledTd, StyledTr } from "./styled";
+import { Table, Th, Td, Tr } from "./styled";
 const TableHeader = ({ headers }) => (
     <thead>
         <tr>
             {headers.map((header, index) => (
-                <StyledTh key={index}>{header}</StyledTh>
+                <Th key={index}>{header}</Th>
             ))}
         </tr>
     </thead>
 );
 
-const TableCell = ({ data }) => (
+const TableCell = ({ rows }) => (
     <tbody>
-        {data.map((row, rowIndex) => (
-            <StyledTr key={rowIndex}>
+        {rows.map((row, rowIndex) => (
+            <Tr key={rowIndex}>
                 {row.map((cell, cellIndex) => (
-                    <StyledTd key={cellIndex}>{cell}</StyledTd>
+                    <Td key={cellIndex}>{cell}</Td>
                 ))}
-            </StyledTr>
+            </Tr>
         ))}
     </tbody>
 );
-const TableCustom = ({ headers, data }) => (
-    <StyledTable>
+const TableCustom = ({ headers, rows }) => (
+    <Table>
         <TableHeader headers={headers} />
-        <TableCell data={data} />
-    </StyledTable>
+        <TableCell rows={rows} />
+    </Table>
 );
 
 export default TableCustom;
