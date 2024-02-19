@@ -16,7 +16,7 @@ Este documento descreve a documentação do frontend para a aplicação web de P
 2. instalar o projeto:
 
    ```bash
-   cd pedido-cirurgico
+   cd case-a3data-front
    npm install
    npm run dev
    ```
