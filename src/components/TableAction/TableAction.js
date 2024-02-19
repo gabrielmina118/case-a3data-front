@@ -35,6 +35,7 @@ const TableAction = ({
 
   const getAll = async () => {
     const response = await app.get(path);
+    console.log(response.data.data)
     return response.data.data;
   };
   const updateData = async () => {
@@ -57,7 +58,7 @@ const TableAction = ({
 
       const rowsTable = data.map((row) => {
         const rowTable = mapColumns.map((column) => {
-          return <CellText text={row[column.key]} />;
+           return <CellText text={row[column.key]} />;
         });
         rowTable.push(
           <CellActions

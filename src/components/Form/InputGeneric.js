@@ -11,11 +11,12 @@ const masks = {
 };
 const InputText = ({ column, onChange, form, type }) => {
   return (
-    <Input
-      value={form[column.key] || ""}
-      onChange={(e) => onChange(e, masks[type])}
-      name={column.key}
-    ></Input>
+      <Input
+          value={form[column.key] || ""}
+          onChange={(e) => onChange(e, masks[type])}
+          name={column.key}
+          placeholder={column.text}
+      ></Input>
   );
 };
 
