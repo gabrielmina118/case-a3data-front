@@ -50,7 +50,7 @@ projeto/
 - Edição e atualização de pedidos cirúrgicos existentes.
 - Visualização detalhada de cada pedido cirúrgico.
 - Exclusão de pedidos cirúrgicos existentes de forma segura.
-- 
+
 ## Tecnologias Utilizadas
 
 - ReactJS: Framework frontend que permite a construção de interfaces de usuário interativas e dinâmicas.
