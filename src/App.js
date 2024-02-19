@@ -15,9 +15,9 @@ function App() {
             case 1:
                 return <Room />;
             case 2:
-                return <Hospital />;
-            case 3:
                 return <Procedure />;
+            case 3:
+                return <Hospital />;
             case 4:
                 return <SurgicalOrder />;
             default:
