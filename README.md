@@ -10,14 +10,15 @@ Este documento descreve a documentação do frontend para a aplicação web de P
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/detona-ralph.git
+   git clone https://github.com/seu-usuario/case-a3data-front
    ```
 
-2. Abra o arquivo `index.html` no seu navegador:
+2. instalar o projeto:
 
    ```bash
-   cd detona-ralph
-   open index.html
+   cd pedido-cirurgico
+   npm install
+   npm run dev
    ```
 
 ## Imagens
@@ -53,7 +54,6 @@ projeto/
 ## Tecnologias Utilizadas
 
 - ReactJS: Framework frontend que permite a construção de interfaces de usuário interativas e dinâmicas.
-- Context API: Utilizada para o gerenciamento de estado, incluindo o controle de status da aplicação e compartilhamento de dados entre componentes.
 - Styled Components: Biblioteca utilizada para a estilização do CSS, permitindo a criação de componentes estilizados de forma mais eficiente e modular.
 - Axios: Biblioteca utilizada para realizar requisições HTTP para o backend e interagir com a API RESTful.
 
