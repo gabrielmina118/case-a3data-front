@@ -35,7 +35,6 @@ const TableAction = ({
 
   const getAll = async () => {
     const response = await app.get(path);
-    console.log(response.data.data)
     return response.data.data;
   };
   const updateData = async () => {
